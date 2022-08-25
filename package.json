@@ -1,0 +1,26 @@
+{
+  "name": "typescript-boilerplate",
+  "autor": "Tim Koepsel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node build.ts && tsc && node dist/src/index.js",
+    "build": "ts-node build.ts && tsc",
+    "clean": "ts-node build.ts",
+    "update:boilerplate": "git fetch upstream && git pull upstream master && npm install",
+    "update:submodule": "git submodule update --init --recursive --force –remote",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tim Koepsel",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "shelljs": "^0.8.5",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.11"
+  }
+}
