@@ -1,5 +1,6 @@
 import s from 'shelljs';
 import * as config from './tsconfig.json';
+
 const outDir = config.compilerOptions.outDir;
 
 s.rm('-rf', outDir);

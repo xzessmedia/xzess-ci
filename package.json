@@ -8,6 +8,7 @@
     "start": "ts-node build.ts && tsc && node dist/src/index.js",
     "build": "ts-node build.ts && tsc",
     "clean": "ts-node build.ts",
+    "compile": "ts-node build.ts && tsc && pkg dist/src/index.js && ts-node packager.ts",
     "update:boilerplate": "git fetch upstream && git pull upstream master && npm install",
     "update:submodule": "git submodule update --init --recursive --force –remote",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +17,14 @@
   "author": "Tim Koepsel",
   "license": "MIT",
   "dependencies": {
+    "commander": "^9.4.0",
     "dotenv": "^16.0.1",
+    "moment": "^2.29.4",
+    "moment-range": "^4.0.2",
+    "moment-timezone": "^0.5.37",
+    "pino": "^8.4.2",
+    "pino-pretty": "^9.1.0",
+    "pkg": "^5.8.0",
     "shelljs": "^0.8.5",
     "ts-node": "^10.9.1"
   },
