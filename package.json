@@ -9,6 +9,7 @@
     "build": "ts-node build.ts && tsc",
     "clean": "ts-node build.ts",
     "compile": "ts-node build.ts && tsc && pkg dist/src/index.js && ts-node packager.ts",
+    "install:path": "ts-node install.ts",
     "update:boilerplate": "git fetch upstream && git pull upstream master && npm install",
     "update:submodule": "git submodule update --init --recursive --force –remote",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +18,7 @@
   "author": "Tim Koepsel",
   "license": "MIT",
   "dependencies": {
+    "add-to-path": "^1.1.2",
     "commander": "^9.4.0",
     "dotenv": "^16.0.1",
     "moment": "^2.29.4",

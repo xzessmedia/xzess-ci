@@ -29,6 +29,10 @@ export class CIApplication {
         this.Init();
     }
 
+    GetProgram(program: Command) {
+        return program;
+    }
+
     AddCommand(command: xciCommand) {
         this._commands.push(command);
     }
